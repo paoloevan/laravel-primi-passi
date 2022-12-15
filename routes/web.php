@@ -24,4 +24,9 @@ Route::get('/', function () {
         ]
     ];
     return view('home', $data);
-});
+})->name('home');
+
+Route::get('/about-lang', function () {
+
+    return view('about');
+})->name('about');

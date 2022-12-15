@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+        'Languages_to_Learn' => [
+            'HTML' => 'ok',
+            'CSS' => 'ok',
+            'JS' => 'ok',
+            'PHP' => 'ok',
+            'Laravel' => 'in progress...',
+        ]
+    ];
+    return view('home', $data);
 });
